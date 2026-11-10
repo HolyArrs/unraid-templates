@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Container version="2">
+  <Name>HolyArrs</Name>
+  <Repository>holyarrs/holyarrs:latest</Repository>
+  <Registry>https://hub.docker.com/r/holyarrs/holyarrs</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/HolyArrs/HolyArrs/issues</Support>
+  <Project>https://holyarrs.com</Project>
+  <Overview>One app to find, request and manage your shows, movies and music, instead of running Sonarr, Radarr, Lidarr, Bazarr, Prowlarr and Seerr separately. Browse it like a streaming service and request in one tap. It connects to qBittorrent or SABnzbd for downloads and Plex, Jellyfin or Emby for playback. About 15 MB, no OS inside the image. Beta: keep your current setup until it has proven itself on yours. Keep /config on a direct pool path such as /mnt/cache/appdata/holyarrs, not /mnt/user. For hardlinks, map one share that holds both downloads and your library folders.</Overview>
+  <Category>MediaApp:Video MediaApp:Music Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:6262]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/templates/holyarrs.xml</TemplateURL>
+  <Icon>https://holyarrs.com/email/holyarrs-mark.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <DonateLink>https://github.com/sponsors/CoderLuii</DonateLink>
+  <Config Name="Web port" Target="6262" Default="6262" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false">6262</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/cache/appdata/holyarrs" Mode="rw" Description="Use a direct pool path, not /mnt/user. HolyArrs gives this folder to PUID:PGID." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/holyarrs</Config>
+  <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Optional. Movie library folder." Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Shows" Target="/tv" Default="" Mode="rw" Description="Optional. Shows library folder." Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Optional. Music library folder." Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Optional. Your downloader's download folder." Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Allowed host names" Target="HOLYARRS_ALLOWED_HOSTS" Default="" Mode="" Description="Optional. Names you open HolyArrs by besides its IP, comma-separated, for example tower.local." Type="Variable" Display="always" Required="false" Mask="false" />
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User id HolyArrs runs as." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group id HolyArrs runs as." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="Permission bits new files leave out. 002 lets the group write." Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Your time zone." Type="Variable" Display="advanced" Required="false" Mask="false">America/New_York</Config>
+</Container>
