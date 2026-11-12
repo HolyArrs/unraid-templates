@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/holyarrs/holyarrs</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/HolyArrs/HolyArrs/issues</Support>
+  <Support>https://forums.unraid.net/topic/201254-support-holyarrs-netflix-style-app-for-shows-movies-and-music-the-whole-arr-stack-in-one-15-mb-container/</Support>
   <Project>https://holyarrs.com</Project>
   <Overview>One app to find, request and manage your shows, movies and music, instead of running Sonarr, Radarr, Lidarr, Bazarr, Prowlarr and Seerr separately. Browse it like a streaming service and request in one tap. It connects to qBittorrent or SABnzbd for downloads and Plex, Jellyfin or Emby for playback. About 15 MB, no OS inside the image. Beta: keep your current setup until it has proven itself on yours. Keep /config on a direct pool path such as /mnt/cache/appdata/holyarrs, not /mnt/user. For hardlinks, map one share that holds both downloads and your library folders.</Overview>
   <Category>MediaApp:Video MediaApp:Music Downloaders:</Category>
