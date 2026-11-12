@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CommunityApplications>
   <Profile>Unraid templates for HolyArrs, one self-hosted app for finding, requesting and managing shows, movies and music. Maintained by CoderLuii. Setup notes and help are in the docs, on GitHub and on Discord.</Profile>
-  <Icon>https://holyarrs.com/email/holyarrs-mark.png</Icon>
+  <Icon>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/icons/holyarrs.png</Icon>
   <WebPage>https://holyarrs.com</WebPage>
   <Forum>https://github.com/HolyArrs/HolyArrs/issues</Forum>
   <Discord>https://discord.com/invite/mthsvesKpC</Discord>

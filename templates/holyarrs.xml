@@ -11,7 +11,7 @@
   <Category>MediaApp:Video MediaApp:Music Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:6262]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/templates/holyarrs.xml</TemplateURL>
-  <Icon>https://holyarrs.com/email/holyarrs-mark.png</Icon>
+  <Icon>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/icons/holyarrs.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <DonateLink>https://github.com/sponsors/CoderLuii</DonateLink>
   <Config Name="Web port" Target="6262" Default="6262" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false">6262</Config>
