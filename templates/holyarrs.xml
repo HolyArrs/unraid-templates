@@ -17,7 +17,7 @@ One 15 MB image, about 70 MB RAM idle, no OS inside.
 
 Beta: run it next to your current setup until it has proven itself on yours.
 
-Unraid tips: keep /config on a direct pool path such as /mnt/cache/appdata/holyarrs, not /mnt/user. For hardlinks, map one share that holds both your downloads and your library folders.</Overview>
+Unraid tips: keep /config on a direct pool path such as /mnt/cache/appdata/holyarrs, not /mnt/user, and keep the appdata share on that pool (Primary storage: Cache, Secondary storage: None). If the mover can move appdata to the array, /config ends up empty and HolyArrs starts without its key and database. For hardlinks, map one share that holds both your downloads and your library folders.</Overview>
   <Category>MediaApp:Video MediaApp:Music Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:6262]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/templates/holyarrs.xml</TemplateURL>
@@ -35,7 +35,7 @@ Unraid tips: keep /config on a direct pool path such as /mnt/cache/appdata/holya
   <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/05-library-movies.jpg</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/06-calendar.jpg</Screenshot>
   <Config Name="Web port" Target="6262" Default="6262" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false">6262</Config>
-  <Config Name="Config" Target="/config" Default="/mnt/cache/appdata/holyarrs" Mode="rw" Description="Use a direct pool path, not /mnt/user. HolyArrs gives this folder to PUID:PGID." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/holyarrs</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/cache/appdata/holyarrs" Mode="rw" Description="Use a direct pool path, not /mnt/user, and keep the appdata share on that pool so the mover never moves it. HolyArrs gives this folder to PUID:PGID." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/holyarrs</Config>
   <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Optional. Movie library folder." Type="Path" Display="always" Required="false" Mask="false" />
   <Config Name="Shows" Target="/tv" Default="" Mode="rw" Description="Optional. Shows library folder." Type="Path" Display="always" Required="false" Mask="false" />
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Optional. Music library folder." Type="Path" Display="always" Required="false" Mask="false" />
