@@ -20,20 +20,20 @@ Beta: run it next to your current setup until it has proven itself on yours.
 Unraid tips: keep /config on a direct pool path such as /mnt/cache/appdata/holyarrs, not /mnt/user, and keep the appdata share on that pool (Primary storage: Cache, Secondary storage: None). If the mover can move appdata to the array, /config ends up empty and HolyArrs starts without its key and database. For hardlinks, map one share that holds both your downloads and your library folders.</Overview>
   <Category>MediaApp:Video MediaApp:Music Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:6262]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/templates/holyarrs.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/icons/holyarrs.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/templates/holyarrs.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/icons/holyarrs.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <DonateLink>https://github.com/sponsors/CoderLuii</DonateLink>
   <ReadMe>https://docs.holyarrs.com/start/install/</ReadMe>
   <Requires>A downloader such as qBittorrent or SABnzbd. Plex, Jellyfin or Emby to watch.</Requires>
   <ExtraSearchTerms>sonarr radarr lidarr bazarr prowlarr seerr overseerr jellyseerr arr requests netflix media</ExtraSearchTerms>
   <DonateText>Support HolyArrs</DonateText>
-  <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/01-explore-movies.jpg</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/02-newpopular-movies.jpg</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/03-title-tv.jpg</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/04-requests-open.jpg</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/05-library-movies.jpg</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/HolyArrs/unraid-templates/main/screenshots/06-calendar.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/screenshots/01-explore-movies.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/screenshots/02-newpopular-movies.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/screenshots/03-title-tv.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/screenshots/04-requests-open.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/screenshots/05-library-movies.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/HolyArrs/HolyArrs-Templates/main/screenshots/06-calendar.jpg</Screenshot>
   <Config Name="Web port" Target="6262" Default="6262" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false">6262</Config>
   <Config Name="Config" Target="/config" Default="/mnt/cache/appdata/holyarrs" Mode="rw" Description="Use a direct pool path, not /mnt/user, and keep the appdata share on that pool so the mover never moves it. HolyArrs gives this folder to PUID:PGID." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/holyarrs</Config>
   <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Optional. Movie library folder." Type="Path" Display="always" Required="false" Mask="false" />
